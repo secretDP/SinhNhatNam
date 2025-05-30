@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,16 +29,52 @@
             z-index: 1;
         }
 
-        .sticker-1 { top: 10%; left: 10%; animation-delay: 0s; }
-        .sticker-2 { top: 20%; right: 15%; animation-delay: 2s; }
-        .sticker-3 { bottom: 20%; left: 20%; animation-delay: 4s; }
-        .sticker-4 { bottom: 10%; right: 10%; animation-delay: 1s; }
-        .sticker-5 { top: 50%; left: 5%; animation-delay: 3s; }
-        .sticker-6 { top: 60%; right: 5%; animation-delay: 5s; }
+        .sticker-1 {
+            top: 10%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .sticker-2 {
+            top: 20%;
+            right: 15%;
+            animation-delay: 2s;
+        }
+
+        .sticker-3 {
+            bottom: 20%;
+            left: 20%;
+            animation-delay: 4s;
+        }
+
+        .sticker-4 {
+            bottom: 10%;
+            right: 10%;
+            animation-delay: 1s;
+        }
+
+        .sticker-5 {
+            top: 50%;
+            left: 5%;
+            animation-delay: 3s;
+        }
+
+        .sticker-6 {
+            top: 60%;
+            right: 5%;
+            animation-delay: 5s;
+        }
 
         @keyframes float {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-20px) rotate(5deg); }
+
+            0%,
+            100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-20px) rotate(5deg);
+            }
         }
 
         /* Password Screen */
@@ -46,7 +83,7 @@
             background: white;
             padding: 40px;
             border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
             max-width: 400px;
             width: 90%;
             position: relative;
@@ -85,9 +122,19 @@
         }
 
         @keyframes shake {
-            0%, 100% { transform: translateX(0); }
-            25% { transform: translateX(-5px); }
-            75% { transform: translateX(5px); }
+
+            0%,
+            100% {
+                transform: translateX(0);
+            }
+
+            25% {
+                transform: translateX(-5px);
+            }
+
+            75% {
+                transform: translateX(5px);
+            }
         }
 
         .keypad {
@@ -246,7 +293,7 @@
             z-index: 2;
             border: 2px solid #FF69B4;
             border-bottom: none;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
 
         .envelope-front::after {
@@ -273,14 +320,21 @@
             transform: translate(-50%, -50%);
             font-size: 35px;
             color: white;
-            text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
             z-index: 3;
             animation: heartbeat 2s infinite;
         }
 
         @keyframes heartbeat {
-            0%, 100% { transform: translate(-50%, -50%) scale(1); }
-            50% { transform: translate(-50%, -50%) scale(1.1); }
+
+            0%,
+            100% {
+                transform: translate(-50%, -50%) scale(1);
+            }
+
+            50% {
+                transform: translate(-50%, -50%) scale(1.1);
+            }
         }
 
         .envelope-decorations {
@@ -318,7 +372,7 @@
             border-radius: 8px;
             opacity: 0;
             transition: opacity 0.3s;
-            box-shadow: inset 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
             z-index: 1;
         }
 
@@ -341,6 +395,7 @@
                 opacity: 1;
                 transform: scale(0);
             }
+
             100% {
                 opacity: 0;
                 transform: scale(3);
@@ -352,6 +407,7 @@
                 opacity: 1;
                 transform: translate(0, 0);
             }
+
             100% {
                 opacity: 0;
                 transform: translate(var(--dx), var(--dy));
@@ -362,7 +418,7 @@
             color: white;
             font-size: 18px;
             margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
 
         /* Letter Content */
@@ -371,7 +427,7 @@
             background: white;
             padding: 40px;
             border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
             max-width: 600px;
             width: 90%;
             position: relative;
@@ -434,7 +490,9 @@
 
         /* Mobile responsive */
         @media (max-width: 768px) {
-            .password-screen, .letter-content {
+
+            .password-screen,
+            .letter-content {
                 padding: 20px;
                 margin: 20px;
             }
@@ -456,6 +514,7 @@
         }
     </style>
 </head>
+
 <body>
     <!-- Floating beauty stickers -->
     <div class="floating-sticker sticker-1">💄</div>
@@ -468,11 +527,11 @@
     <!-- Password Screen -->
     <div class="password-screen" id="passwordScreen">
         <h1>🔐 Nhập mật khẩu để xem thư sinh nhật</h1>
-        
+
         <div class="password-display" id="passwordDisplay">
-            Nhấn số để nhập mật khẩu
+
         </div>
-        
+
         <div class="keypad">
             <button class="key-btn" onclick="addDigit('1')">1</button>
             <button class="key-btn" onclick="addDigit('2')">2</button>
@@ -485,13 +544,13 @@
             <button class="key-btn" onclick="addDigit('9')">9</button>
             <button class="key-btn" onclick="addDigit('0')" style="grid-column: 2;">0</button>
         </div>
-        
+
         <div class="control-buttons">
-            <button class="clear-btn" onclick="clearPassword()">🗑️ Xóa hết</button>
-            <button class="delete-btn" onclick="deleteLastDigit()">⬅️ Xóa 1 số</button>
+            <button class="clear-btn" onclick="clearPassword()">Xóa hết</button>
+            <button class="delete-btn" onclick="deleteLastDigit()">Xóa 1 số</button>
         </div>
-        
-        <button class="unlock-btn" onclick="checkPassword()" id="unlockBtn" disabled>Mở khóa 🗝️</button>
+
+        <button class="unlock-btn" onclick="checkPassword()" id="unlockBtn" disabled>Mở khóa</button>
         <div class="error-msg" id="errorMsg">Mật khẩu không đúng! Thử lại nhé 😊</div>
     </div>
 
@@ -517,11 +576,12 @@
         <div class="letter-header">
             <h2>🎂 Chúc Mừng Sinh Nhật Nấm! 🎂</h2>
         </div>
-        <img src="images/26.png" alt="Ảnh chúc mừng sinh nhật">
+
         <div class="birthday-image">
-            
+            <img src="images/26.png" alt="Ảnh chúc mừng sinh nhật">
+
         </div>
-        
+
         <div class="letter-text">
             <p>Gửi gái đẹp,</p>
 
@@ -539,13 +599,13 @@
 
             <p>Hãy tiếp tục tỏa sáng như chính mình nhé, Nấm ơi! 💖</p>
         </div>
-        
+
         <div class="signature">
             Với tất cả tình yêu thương,<br>
-            Người bạn của Nấm 💕<br>
-            <small>02/06/2024</small>
+            Kí tên : Người bí mật 💕<br>
+            <small>02/06/2025</small>
         </div>
-        
+
         <button class="back-btn" onclick="goBack()">← Quay lại xem phong bì</button>
     </div>
 
@@ -557,7 +617,7 @@
                 currentPassword += digit;
                 updatePasswordDisplay();
                 updateUnlockButton();
-                
+
                 // Hiệu ứng âm thanh bằng rung
                 if (navigator.vibrate) {
                     navigator.vibrate(50);
@@ -605,7 +665,7 @@
         function checkPassword() {
             const errorMsg = document.getElementById('errorMsg');
             const display = document.getElementById('passwordDisplay');
-            
+
             if (currentPassword === '020604') {
                 document.getElementById('passwordScreen').style.display = 'none';
                 document.getElementById('letterScreen').style.display = 'block';
@@ -615,12 +675,12 @@
                 // Hiệu ứng lỗi
                 display.classList.add('error');
                 errorMsg.style.display = 'block';
-                
+
                 // Rung thiết bị nếu hỗ trợ
                 if (navigator.vibrate) {
                     navigator.vibrate([100, 50, 100]);
                 }
-                
+
                 // Tự động xóa sau 2 giây
                 setTimeout(() => {
                     clearPassword();
@@ -632,10 +692,10 @@
         function openLetter() {
             const envelope = document.getElementById('envelope');
             envelope.classList.add('opened');
-            
+
             // Start fireworks immediately when clicking
             createFireworks();
-            
+
             setTimeout(() => {
                 document.getElementById('letterScreen').style.display = 'none';
                 document.getElementById('letterContent').style.display = 'block';
@@ -645,14 +705,14 @@
 
         function createFireworks() {
             const colors = ['#FF6B6B', '#4ECDC4', '#45B7D1', '#96CEB4', '#FFEAA7', '#DDA0DD', '#98D8C8'];
-            
+
             // Create multiple firework bursts
             for (let burst = 0; burst < 5; burst++) {
                 setTimeout(() => {
                     // Random position for each burst
                     const x = Math.random() * window.innerWidth;
                     const y = Math.random() * (window.innerHeight * 0.6) + window.innerHeight * 0.1;
-                    
+
                     // Create explosion particles
                     for (let i = 0; i < 30; i++) {
                         const particle = document.createElement('div');
@@ -660,19 +720,19 @@
                         particle.style.background = colors[Math.floor(Math.random() * colors.length)];
                         particle.style.left = x + 'px';
                         particle.style.top = y + 'px';
-                        
+
                         // Random direction for each particle
                         const angle = (i / 30) * 2 * Math.PI;
                         const distance = 50 + Math.random() * 100;
                         const dx = Math.cos(angle) * distance;
                         const dy = Math.sin(angle) * distance;
-                        
+
                         particle.style.setProperty('--dx', dx + 'px');
                         particle.style.setProperty('--dy', dy + 'px');
                         particle.style.animation = 'firework-particle 1.5s ease-out forwards';
-                        
+
                         document.body.appendChild(particle);
-                        
+
                         // Remove particle after animation
                         setTimeout(() => {
                             if (particle.parentNode) {
@@ -680,7 +740,7 @@
                             }
                         }, 1500);
                     }
-                    
+
                     // Add sound effect text
                     const soundEffect = document.createElement('div');
                     soundEffect.textContent = '🎆';
@@ -692,13 +752,13 @@
                     soundEffect.style.pointerEvents = 'none';
                     soundEffect.style.animation = 'firework-explosion 1s ease-out forwards';
                     document.body.appendChild(soundEffect);
-                    
+
                     setTimeout(() => {
                         if (soundEffect.parentNode) {
                             soundEffect.parentNode.removeChild(soundEffect);
                         }
                     }, 1000);
-                    
+
                 }, burst * 300);
             }
         }
@@ -724,7 +784,7 @@
                     confetti.style.borderRadius = '50%';
                     confetti.style.animation = 'fall 3s linear forwards';
                     document.body.appendChild(confetti);
-                    
+
                     setTimeout(() => {
                         confetti.remove();
                     }, 3000);
@@ -746,7 +806,7 @@
                     heart.style.animation = 'fall 4s linear forwards';
                     heart.style.pointerEvents = 'none';
                     document.body.appendChild(heart);
-                    
+
                     setTimeout(() => {
                         heart.remove();
                     }, 4000);
@@ -769,4 +829,5 @@
         // Allow Enter key to submit password - removed since we don't have input field anymore
     </script>
 </body>
+
 </html>
